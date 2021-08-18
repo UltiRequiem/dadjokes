@@ -10,6 +10,8 @@ Get random dad jokes in terminal.
 
 This project fetch the [icanhazdadjoke API](https://icanhazdadjoke.com/api).
 
+![Screenshot](./screenshot.png)
+
 ## Installation
 
 ```bash
