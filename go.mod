@@ -1,3 +1,3 @@
-module github.com/UltiRequiem/dadjoke
+module github.com/UltiRequiem/dadjokes
 
 go 1.16
