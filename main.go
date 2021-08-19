@@ -22,7 +22,26 @@ func fetch(url string) *http.Request {
 
 	req.Header.Add("Accept", "application/json")
 	req.Header.Add("Content-Type", "application/json")
+
 	return req
+}
+
+func parseHttpResponse(response *http.Response) []byte {
+	responseData, readError := ioutil.ReadAll(response.Body)
+
+	if readError != nil {
+		fmt.Println("Error reading response.")
+		os.Exit(1)
+	}
+
+	return responseData
+}
+
+func parseBytesToResponseObject(bytes []byte) Response {
+	var responseObject Response
+
+	json.Unmarshal(bytes, &responseObject)
+	return responseObject
 }
 
 func main() {
@@ -32,19 +51,12 @@ func main() {
 
 	if err != nil {
 		fmt.Print(err.Error())
+		os.Exit(1)
 	}
 
 	defer resp.Body.Close()
 
-	bodyBytes, err := ioutil.ReadAll(resp.Body)
-
-	if err != nil {
-		fmt.Print(err.Error())
-	}
-
-	var responseObject Response
-
-	json.Unmarshal(bodyBytes, &responseObject)
+	responseObject := parseBytesToResponseObject(parseHttpResponse(resp))
 
 	fmt.Println(" " + responseObject.Joke)
 }
