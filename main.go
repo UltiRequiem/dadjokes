@@ -50,7 +50,7 @@ func main() {
 	resp, err := client.Do(fetch("https://icanhazdadjoke.com"))
 
 	if err != nil {
-		fmt.Print(err.Error())
+		fmt.Println("Error with the client.")
 		os.Exit(1)
 	}
 
