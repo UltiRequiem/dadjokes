@@ -25,10 +25,9 @@ func fetch(url string) *http.Request {
 	return req
 }
 
-
-
 func main() {
 	client := &http.Client{}
+
 	resp, err := client.Do(fetch("https://icanhazdadjoke.com"))
 
 	if err != nil {
