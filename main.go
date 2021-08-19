@@ -5,24 +5,31 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 )
 
 type Response struct {
 	Joke string `json:"joke"`
 }
 
-func main() {
-	client := &http.Client{}
+func fetch(url string) *http.Request {
+	req, err := http.NewRequest("GET", url, nil)
 
-	req, err := http.NewRequest("GET", "https://icanhazdadjoke.com", nil)
 	if err != nil {
-		fmt.Print(err.Error())
+		fmt.Println("Probably you don't have internet.")
+		os.Exit(1)
 	}
 
 	req.Header.Add("Accept", "application/json")
 	req.Header.Add("Content-Type", "application/json")
+	return req
+}
 
-	resp, err := client.Do(req)
+
+
+func main() {
+	client := &http.Client{}
+	resp, err := client.Do(fetch("https://icanhazdadjoke.com"))
 
 	if err != nil {
 		fmt.Print(err.Error())
