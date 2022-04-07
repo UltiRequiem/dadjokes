@@ -1,4 +1,4 @@
-package main
+package cmd
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ import (
 	dadjokes "github.com/UltiRequiem/dadjokes/pkg"
 )
 
-func main() {
+func Exec() {
 
 	flag.Parse()
 
