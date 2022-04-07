@@ -1,9 +1,10 @@
 # Dadjokes
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/UltiRequiem/dadjokes)](https://goreportcard.com/report/github.com/UltiRequiem/dadjokes)
+[![Go Reference](https://pkg.go.dev/badge/github.com/UltiRequiem/dadjokes/pkg.svg)](https://pkg.go.dev/github.com/UltiRequiem/dadjokes/pkg)
 
 Get random dad jokes using the
-[icanhazdadjoke API](https://icanhazdadjoke.com/api).
+[icanhazdadjoke API](https://icanhazdadjoke.com/api) 👨
 
 ### Install
 
@@ -33,7 +34,7 @@ func main() {
 ### Documentation
 
 Is hosted on
-[pkg.go.dev](https://pkg.go.dev/github.com/UltiRequiem/dadjokes/pkg).
+[pkg.go.dev](https://pkg.go.dev/github.com/UltiRequiem/dadjokes/pkg) 📖
 
 ## CLI
 
