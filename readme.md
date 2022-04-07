@@ -30,6 +30,11 @@ func main() {
 }
 ```
 
+### Documentation
+
+Is hosted on
+[pkg.go.dev](https://pkg.go.dev/github.com/UltiRequiem/dadjokes/pkg).
+
 ## CLI
 
 ### Installation
