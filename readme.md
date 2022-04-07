@@ -50,7 +50,7 @@ Or 👇
 dadjokes 15
 ```
 
-![Screenshot](./screenshot.png)
+![Screenshot](https://user-images.githubusercontent.com/71897736/162102151-2c141e36-9f66-48ac-8b8a-d5b371498f73.png)
 
 [Video Showcase](https://youtu.be/eo-1zpdiLnY) 📹
 
